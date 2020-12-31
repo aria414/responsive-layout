@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
+
+/* DEFAULT DISPLAY FOR MOBILE 425PX */
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.container {
+  /* border: 1px solid; */
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+header {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.logo,
+h2 {
+  background-color: #fff;
+  color: #f38b2c;
+  padding: 10px;
+}
+
+h2 {
+  display: none;
+}
+.logo h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+header p span {
+  color: #ea5b4c;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+header p {
+  padding: 10px;
+  display: none;
+}
+
+nav {
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+  /* border: solid 2px green; */
+  height: 50px;
+  background-color: #f1f1f1;
+}
+
+nav ul {
+  font-size: 18px;
+  display: none;
+}
+
+nav i.fas.fa-bars {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 3%;
+  margin-top: 1%;
+}
+
+section {
+  width: 100%;
+}
+section h3 {
+  padding: 15px;
+}
+.green {
+  background-color: #7dd320;
+}
+
+.red {
+  background-color: #ea5b4c;
+}
+
+.blue {
+  background-color: #45aeff;
+}
+
+.descr{
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+
+/* MEDIA QUERIES FOR IPAD AND DESKTOP
+  min-width: 768px: IPad
+*/
+@media screen and (min-width: 768px) {
+  h2 {
+    display: none;
+  }
+  nav i.fas.fa-bars {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+  ul li {
+    /* border: 1px solid red; */
+    padding: 10px;
+  }
+  .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .blue {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    height: 60px;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .logo h1 {
+    font-size: 42px;
+  }
+
+  /* Force a line break after RESPONSIVE by setting the span for DESIGN to be a block */
+  .logo h1 span {
+    display: block;
+    margin: 5px;
+  }
+
+  h2 {
+    display: block;
+    background-color: #000;
+    text-transform: none;
+    font-size: 24px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    padding: 10px;
+  }
+  header p {
+    padding: 10px;
+    display: block;
+  }
+  .content {
+    display: flex;
+    width: 100%;
+  }
+
+}
